@@ -8,6 +8,12 @@
 </head>
 <body>
 
+<% if session[:parent_id] == nil %>
+  <%= link_to "Log in", login_path %>
+  <% else %>
+  <%= link_to "Log out", logout_path, method: :delete %>
+<% end %>
+
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -23,6 +29,16 @@
 <div class="notice">
   <% if flash[:notice] %>
     <%= flash[:notice] %>
+  <% end %>
+</div>
+<div class="logged-in">
+  <% if flash[:logged_in] %>
+    <%= flash[:logged_in] %>
+  <% end %>
+</div>
+<div class="wrong">
+  <% if flash[:wrong] %>
+    <%= flash[:wrong] %>
   <% end %>
 </div>
   <%= yield %>
