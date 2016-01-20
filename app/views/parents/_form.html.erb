@@ -1,0 +1,18 @@
+<ul>
+  <%= form_for(@parent) do |f| %>
+  <li><%= f.label :first_name %>
+  <%= f.text_field :first_name %></li>
+  <li><%= f.label :last_name %>
+  <%= f.text_field :last_name %></li>
+  <li><%= f.label :email %>
+  <%= f.email_field :email %></li>
+  <li><%= f.label :username %>
+  <%= f.text_field :username %></li>
+  <li><%= f.label :password %>
+  <%= f.password_field :password %></li>
+  <li><%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %></li>
+  <li><%= f.submit "Create Account" %></li>
+
+<% end %>
+</ul>
