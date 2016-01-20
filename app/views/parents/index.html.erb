@@ -6,4 +6,11 @@
     </div>
   </div>
 </div>
+<div class="row center dashboard-button">
+  <div class="col-md-12">
+    <div class="btn-group">
+      <%= button_to('Delete a Kid', { controller: 'children', action: 'destroy' }, class: 'btn btn-default btn-lg button', method: :delete, id: @child) %>
+    </div>
+  </div>
+</div>
 
