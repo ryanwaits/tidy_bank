@@ -36,9 +36,9 @@
     <%= flash[:logged_in] %>
   <% end %>
 </div>
-<div class="wrong">
-  <% if flash[:wrong] %>
-    <%= flash[:wrong] %>
+<div class="error">
+  <% if flash[:error] %>
+    <%= flash[:error] %>
   <% end %>
 </div>
   <%= yield %>
