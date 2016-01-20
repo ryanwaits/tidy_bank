@@ -1,5 +1,6 @@
 class ParentsController < ApplicationController
   def index
+    @parent = session[:parent_name]
   end
 
   def show

@@ -1,0 +1,9 @@
+LOG:  database system was shut down at 2016-01-20 14:26:26 CST
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections
+FATAL:  database "ryanwaits" does not exist
+FATAL:  database "tidy_bank_development" does not exist
+FATAL:  database "tidy_bank_development" does not exist
+ERROR:  missing FROM-clause entry for table "email" at character 42
+STATEMENT:  SELECT  "parents".* FROM "parents" WHERE "email"."email" = 'ryan.waits@gmail.com' LIMIT 1
