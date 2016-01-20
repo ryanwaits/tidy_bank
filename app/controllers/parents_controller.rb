@@ -1,8 +1,6 @@
 class ParentsController < ApplicationController
   def index
-    @parent = session[:parent_name]
-    @parent = Parent.find(session[:parent_id])
-    @children = Child.where(parent_id: @parent.id)
+    
   end
 
   def show
