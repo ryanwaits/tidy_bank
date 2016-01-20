@@ -1,3 +1,39 @@
 // Place all the styles related to the dashboards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$light-green: #B2DBBF;
+$dark-green: #70C1B3;
+$yellow: #F3FFBD;
+$red: #FF1654;
+$blue: #247BA0;
+
+.jumbotron {
+  background-color: $light-green;
+  text-align: center;
+  color: $red;
+}
+
+.dashboard-header {
+  font-weight: 800;
+}
+
+.dashboard-subheader {
+  color: $blue;
+  font-weight: 600;
+}
+
+.center {
+  text-align: center;
+}
+
+.button {
+  background-color: $yellow !important;
+  color: $red !important;
+  width: 200px;
+  font-weight: 800;
+}
+
+.dashboard-button {
+  padding: 1.5%;
+}

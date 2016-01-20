@@ -10,7 +10,26 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require_self
+ *= require_tree .
  */
- 
+
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ // fonts
+ @import url(https://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600,500,100,200,300);
+
+$light-green: #B2DBBF;
+$dark-green: #70C1B3;
+$yellow: #F3FFBD;
+$red: #FF1654;
+$blue: #247BA0;
+
+ body {
+  background-color: $light-green;
+  font-family:  'Raleway', sans-serif;
+  font-weight: 900;
+  }
+
+
+
