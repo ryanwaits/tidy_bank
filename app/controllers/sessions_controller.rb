@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       flash[:logged_in] = "Logged in"
       redirect_to parents_path
     else
-      flash[:wrong] = "Get the fuck out"
+      flash[:error] = "Your username or password is incorrect"
       render 'new'
     end
   end
