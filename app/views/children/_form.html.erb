@@ -1,4 +1,4 @@
-<h1>Create an Account</h1>
+<h1>Add a Kid</h1>
 
   <%= form_for(:session, url: new_child_path) do |f| %>
 
@@ -20,5 +20,6 @@
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-  <%= f.submit "Create Account", class: 'btn btn-primary' %>
+  <%= f.submit "Add Kid", class: 'btn btn-primary' %>
 <% end %>
+
