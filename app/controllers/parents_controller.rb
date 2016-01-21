@@ -1,15 +1,13 @@
 class ParentsController < ApplicationController
   include SessionsHelper
   def index
-    
+    @parent = session[:parent_id]
   end
 
   def show
+    @task = Task.new
   end
 
-  def kid_show
-
-  end
 
   def new
     @parent = Parent.new
