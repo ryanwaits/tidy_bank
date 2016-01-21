@@ -33,21 +33,38 @@ $bg-color: #BAE6F1;
   font-weight: 400;
 }
 
-.summary {
-  display: flexbox;
-  justify-content: center;
+section {
+  text-align: center;
+}
+
+.for {
+  display: inline;
+  margin: 0 auto;
+  font-weight: 600;
   color: $blue;
 }
 
-.summary h2 {
-  font-weight: 600;
+.who {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.who h2 {
+  font-weight: 700;
 }
 
 .column {
-  width: 45%;
-  justify-content: center;
+  display: inline-flex;
   font-size: 20px;
   font-weight: 400;
+  color: $blue;
+  margin: 0 auto;
+}
+
+.summary {
+  margin: 0 auto;
+  width: 42%;
+  display: inline-flex;
 }
 
 .center {
