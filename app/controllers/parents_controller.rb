@@ -4,6 +4,8 @@ class ParentsController < ApplicationController
   end
 
   def show
+
+
   end
 
   def new
@@ -12,6 +14,7 @@ class ParentsController < ApplicationController
 
   def create
     @parent = Parent.create(parent_params)
+
     if @parent.save
       redirect_to parent_path(@parent)
     else
@@ -20,9 +23,27 @@ class ParentsController < ApplicationController
     end
   end
 
+   def edit
+
+@parent = Parent.find(params[:id])
+  end
+
+def update
+  @parent = Parent.update(params[:id],parent_params)
+if @parent.save
+  redirect_to parent_path(@parent)
+    else
+      flash[:notice] = "Please fill out the form!"
+      redirect_to edit_parent_path
+    end
+  end
+
+
   private
   def parent_params
     params.require(:parent).permit(:first_name, :last_name, :email, :username, :password, :password_confirmation)
   end
 
 end
+
+
