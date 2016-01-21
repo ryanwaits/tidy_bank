@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   resources :children
   resources :tasks, only: [:create, :update, :destroy]
   resources :sessions, only: [:new]
+  get 'login',  to: 'sessions#new'
+  post 'login',  to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
 
   get 'parents#kid_show', as: '/kid_show'
 

@@ -1,7 +1,7 @@
 class ParentsController < ApplicationController
+  include SessionsHelper
   def index
-    # @parent = Parent.find(session[:parent_id])
-    # @children = Child.where(parent_id: @parent.id)
+    
   end
 
   def show
@@ -18,6 +18,7 @@ class ParentsController < ApplicationController
   def create
     @parent = Parent.create(parent_params)
     if @parent.save
+      log_in(@parent)
       redirect_to parents_path
     else
       flash[:notice] = "Please fill out the form!"

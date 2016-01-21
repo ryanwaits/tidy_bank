@@ -8,21 +8,20 @@
 </head>
 <body>
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">
-        <%= image_tag("logo.jpg", size: "40", class:"logo") %>
-      </a>
-    </div>
-  </div>
-</nav>
-
-
 <div class="container">
 <div class="notice">
   <% if flash[:notice] %>
     <%= flash[:notice] %>
+  <% end %>
+</div>
+<div class="logged-in">
+  <% if flash[:logged_in] %>
+    <%= flash[:logged_in] %>
+  <% end %>
+</div>
+<div class="error">
+  <% if flash[:error] %>
+    <%= flash[:error] %>
   <% end %>
 </div>
   <%= yield %>
