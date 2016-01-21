@@ -11,7 +11,17 @@ class ChildrenController < ApplicationController
   end
 
   def create
-   
+    @child = Child.new(child_params)
+    @child.parent_id = session[:parent_id]
+    @balance = Balance.create(current_balance: 0, balance_due: 0)
+    @child.balance_id = @balance.id
+
+    if @child.save
+      redirect_to parents_path
+    else
+      render 'new'
+    end
+
   end
 
   def edit
@@ -28,7 +38,9 @@ class ChildrenController < ApplicationController
   def set_child
     @child = Child.find(params[:id])
   end
+
   def child_params
     params.require(:child).permit(:first_name, :last_name, :email, :username, :password, :password_confirmation)
   end
+
 end
