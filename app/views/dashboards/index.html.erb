@@ -1,33 +1,61 @@
-<div class="row">
-  <div class="col-md-12">
+<div class="row title">
+  <div class="col-md-12 col-sm-12">
     <div class="jumbotron">
-      <div class="dashboard-header">
-        <h1>Do Chores, Get Money</h1>
+      <div>
+        <h1 class="dashboard-header">Tidy Bank</h1>
       </div>
-      <div class="dashboard-subheader">
-        <h4>Tidy Bank makes chores fun for the whole family!</h4>
+      <div>
+        <h3 class="dashboard-subheader">Do Chores, Get Money</h3>
       </div>
     </div>
   </div>
 </div>
 <div class="row center dashboard-button">
-  <div class="col-md-12">
+  <div class="col-md-12 col-sm-12">
     <div class="btn-group">
       <%= button_to('Sign up for Free!', { controller: 'parents', action: 'new' }, class: 'btn btn-default btn-lg button', method: :get) %>
     </div>
   </div>
 </div>
 <div class="row center dashboard-button">
-  <div class="col-md-12">
+  <div class="col-md-12 col-sm-12">
     <div class="btn-group">
       <%= button_to('Parent Login', { controller: 'sessions', action: 'new' }, class: 'btn btn-default btn-lg button', method: :get) %>
     </div>
   </div>
 </div>
 <div class="row center dashboard-button">
-  <div class="col-md-12">
+  <div class="col-md-12 col-sm-12">
     <div class="btn-group">
       <%= button_to('Kid Login', { controller: 'sessions', action: 'new' }, class: 'btn btn-default btn-lg button', method: :get) %>
     </div>
   </div>
 </div>
+<div class="row">
+  <div class="col-md-12 col-sm-12">
+    <div>
+      <h1 class="about">How does it work?</h1>
+      <div class="divider"></div>
+    </div>
+  </div>
+</div>
+<section>
+  <div class="row for">
+    <div class="col-md-6 col-sm-6 who">
+      <h2>For Parents</h2>
+    </div>
+    <div class="col-md-6 col-sm-6 who">
+      <h2>For Kids</h2>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="row column">
+    <div class="col-md-6 col-sm-6 summary">
+      <p>Quickly and easily create scheduled chores with dollar values. When your child says they're done, you approve and they get the money.</p>
+    </div>
+    <div class="col-md-6 col-sm-6 summary">
+      <p>Sign into the Tidy Bank mobile or web app, designed especially for kids, and see their chores and how much money they've made.</p>
+    </div>
+  </div>
+</section>

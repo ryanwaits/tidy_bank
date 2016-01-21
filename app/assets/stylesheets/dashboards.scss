@@ -9,19 +9,88 @@ $red: #FF1654;
 $blue: #247BA0;
 $bg-color: #BAE6F1;
 
+.title {
+  margin: 0 auto;
+}
+
 .jumbotron {
   background-color: $bg-color;
   text-align: center;
   color: $red;
+  margin-top: 0 auto;
+  margin-bottom: .5px;
+  padding: 60px 0 15px 0;
 }
 
 .dashboard-header {
   font-weight: 800;
+  margin: 0 auto;
 }
 
 .dashboard-subheader {
   color: $blue;
+  font-weight: 500;
+}
+
+.about {
+  color: $blue;
+  text-align: center;
+  margin: 30px auto 30px auto;
+  font-size: 45px;
+  font-weight: 400;
+}
+
+.divider {
+  border-bottom: 2px solid $red;
+  width: 50%;
+  margin: 0 auto;
+  opacity: 0.2;
+
+
+}
+
+section {
+  text-align: center;
+}
+
+.for {
+  display: inline;
+  margin: 0 auto;
   font-weight: 600;
+  color: $blue;
+}
+
+.for h2 {
+  margin: 0 auto;
+  padding-top: 15px;
+}
+
+.who {
+  margin: 0 auto;
+  width: 50%;
+  padding-top: 1.5%;
+}
+
+.who h2 {
+  font-weight: 700;
+}
+
+.column {
+  display: inline-flex;
+  font-size: 20px;
+  font-weight: 400;
+  color: $blue;
+  margin: 0 auto;
+}
+
+.summary {
+  margin: 0 auto;
+  width: 42%;
+  display: inline-flex;
+}
+
+.summary p {
+  padding-bottom: 10%;
 }
 
 .center {
