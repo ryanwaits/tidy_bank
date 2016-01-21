@@ -9,15 +9,22 @@ $red: #FF1654;
 $blue: #247BA0;
 $bg-color: #BAE6F1;
 
+.title {
+  margin: 0 auto;
+}
+
 .jumbotron {
   background-color: $bg-color;
   text-align: center;
   color: $red;
+  margin-top: 0 auto;
   margin-bottom: .5px;
+  padding: 60px 0 15px 0;
 }
 
 .dashboard-header {
   font-weight: 800;
+  margin: 0 auto;
 }
 
 .dashboard-subheader {
@@ -28,7 +35,7 @@ $bg-color: #BAE6F1;
 .about {
   color: $blue;
   text-align: center;
-  margin: 55px auto 30px auto;
+  margin: 30px auto 30px auto;
   font-size: 45px;
   font-weight: 400;
 }
