@@ -9,8 +9,13 @@
 <div class="row center dashboard-button">
   <div class="col-md-12">
     <div class="btn-group">
-      <%= link_to 'Joey', parent_path(@parent), class: 'btn btn-default btn-lg button' %>
-    </div>
+    <% if @children.length == 1  %>
+      <%= link_to @children.first.first_name, { controller: 'children', action: 'new'}, class: 'btn btn-default btn-lg button' %>
+      <% elsif @children.length >= 2 %>
+      <% @children.each do |child| %>
+        <%= link_to child.first_name, { controller: 'children', action: 'new'}, class: 'btn btn-default btn-lg button' %>
+      <% end %>
+    <% end %>
   </div>
 </div>
 
