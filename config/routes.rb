@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :tasks, only: [:create, :update, :destroy]
   resources :sessions, only: [:new]
 
+  get 'parents#kid_show', as: '/kid_show'
+
 end
