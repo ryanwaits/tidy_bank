@@ -11,17 +11,7 @@ class ChildrenController < ApplicationController
   end
 
   def create
-    @child = Child.create(child_params)
-    if @child.save
-      @child.parent_id = session[:parent_id]
-      @balance = Balance.create(current_balance: 0, balance_due: 0)
-      @child.balance_id = @balance.id
-      session[:child_id] = @child.id
-      redirect_to parents_path
-    else
-      flash[:notice] = "Please fill out the form!"
-      render 'new'
-    end
+   
   end
 
   def edit
@@ -31,8 +21,7 @@ class ChildrenController < ApplicationController
   end
 
   def destroy
-    @child.destroy
-    redirect_to parents_path
+  
   end
 
   private

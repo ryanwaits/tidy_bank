@@ -5,7 +5,6 @@ class SessionsController < ApplicationController
 
   def create
     parent = Parent.find_by(username: params[:session][:username])
-    puts parent.inspect
     if parent && parent.authenticate(params[:session][:password])
       session[:parent_id] = parent.id
       flash[:logged_in] = "Logged in"

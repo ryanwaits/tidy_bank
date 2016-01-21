@@ -1,29 +1,25 @@
 <div class="row">
   <div class="col-md-12">
     <div class="jumbotron">
-      <h1 class="dashboard-header">Do Chores, Get Money</h1>
-      <h2 class="dashboard-subheader">Tidy Bank makes chores fun for the whole family!</h2>
+      <img src="assets/logo.jpg" alt="">
     </div>
   </div>
 </div>
 <div class="row center dashboard-button">
-  <div class="col-md-12">
-    <div class="btn-group">
-      <%= button_to('Sign up for Free!', { controller: 'parents', action: 'new' }, class: 'btn btn-default btn-lg button', method: :get) %>
-    </div>
-  </div>
-</div>
-<div class="row center dashboard-button">
-  <div class="col-md-12">
+  <div class="col-md-4">
     <div class="btn-group">
       <%= button_to('Parent Login', { controller: 'sessions', action: 'new' }, class: 'btn btn-default btn-lg button', method: :get) %>
     </div>
   </div>
-</div>
-<div class="row center dashboard-button">
-  <div class="col-md-12">
+  <div class="col-md-4">
+    <div class="btn-group">
+      <%= button_to('Sign up for Free!', { controller: 'parents', action: 'new' }, class: 'btn btn-default btn-lg button', method: :get) %>
+    </div>
+  </div>
+  <div class="col-md-4">
     <div class="btn-group">
       <%= button_to('Kid Login', { controller: 'sessions', action: 'new' }, class: 'btn btn-default btn-lg button', method: :get) %>
     </div>
   </div>
 </div>
+

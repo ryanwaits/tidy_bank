@@ -7,9 +7,10 @@ $dark-green: #70C1B3;
 $yellow: #F3FFBD;
 $red: #FF1654;
 $blue: #247BA0;
+$bg-color: #BAE6F1;
 
 .jumbotron {
-  background-color: $light-green;
+  background-color: $bg-color;
   text-align: center;
   color: $red;
 }
@@ -36,4 +37,6 @@ $blue: #247BA0;
 
 .dashboard-button {
   padding: 1.5%;
+  display: flexbox;
+  justify-content: space-around;
 }
