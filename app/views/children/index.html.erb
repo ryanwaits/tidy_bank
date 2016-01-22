@@ -1,2 +1,9 @@
-<h1>Children#index</h1>
-<p>Find me in app/views/children/index.html.erb</p>
+<div class="row center dashboard-button">
+  <div class="col-md-12 col-sm-12">
+    <% @tasks.each do |task| %>
+      <p><%= task.description %></p>
+      <p><%= task.due_date %></p>
+      <p><%= task.price %></p>
+    <%end%>
+  </div>
+</div>
