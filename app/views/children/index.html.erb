@@ -1,7 +1,14 @@
+<% if @tasks.empty? %>
+  <h1>You currently have no tasks</h1>
+<% elsif @tasks.all.length == 1 %>
+  <h1>You only have <%= @tasks.all.length %> task</h1>
+<% else %>
+  <h1>You currently have <%= @tasks.all.count %> tasks</h1>
+<% end %>
 <div class="row center dashboard-button">
   <div class="col-md-12 col-sm-12">
       <% @tasks.each do |task| %>
-        <p><%= task.description %></p>
+        <p><%= task.description %> <%= task.price %> <%= task.due_date %></p>
       <% end %>
 
   </div>

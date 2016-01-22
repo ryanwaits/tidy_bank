@@ -36,7 +36,8 @@ def update
   @parent = Parent.update(params[:id],parent_params)
 
   if @parent.save
-  redirect_to parent_path(@parent)
+  redirect_to parents_path
+  flash[:notice] = "Your account has been updated."
     else
       flash[:notice] = "Please fill out the form!"
       redirect_to edit_parent_path
