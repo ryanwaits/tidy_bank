@@ -12,11 +12,10 @@
   <div class="col-md-12 col-sm-12">
     <% unless session[:parent_id].nil? %>
       <%= link_to 'Logout', logout_path, method: :delete, class: 'logout' %>
-      <%= link_to 'Tasks', parents_path, class: 'logout' %>
-      <%= link_to 'Account', edit_parent_path(session[:parent_id]), class: 'logout' %>
-      <%= link_to 'Home', root_path, class: 'logout' %>
+      <%= link_to 'Tasks', parents_path, class: '' %>
+      <%= link_to 'Account', edit_parent_path(session[:parent_id]), class: '' %>
+      <%= link_to 'Home', root_path, class: '' %>
     <% end %>
-
   </div>
 </div>
 <div class="row">
@@ -26,7 +25,6 @@
       <%= link_to 'Tasks', children_path, class: 'logout' %>
       <%= link_to 'Account', edit_child_path(session[:log_in_child_id]), class: 'logout' %>
       <%= link_to 'Home', root_path, class: 'logout' %>
-      <%= link_to 'Balance:', root_path, class: 'balance' %>
     <% end %>
   </div>
 </div>
@@ -41,25 +39,23 @@
 
 
 <div class="row">
-  <div class="col-md-12 col-sm-12">
-    <div class="container">
-<div class="notice">
-  <% if flash[:notice] %>
-    <%= flash[:notice] %>
-  <% end %>
-</div>
-<div class="logged-in">
-  <% if flash[:logged_in] %>
-    <%= flash[:logged_in] %>
-  <% end %>
-</div>
-<div class="error">
-  <% if flash[:error] %>
-    <%= flash[:error] %>
-  <% end %>
-</div>
-  <%= yield %>
-</div>
+  <div class="container">
+    <div class="notice">
+      <% if flash[:notice] %>
+        <%= flash[:notice] %>
+      <% end %>
+    </div>
+    <div class="logged-in">
+      <% if flash[:logged_in] %>
+        <%= flash[:logged_in] %>
+      <% end %>
+    </div>
+    <div class="error">
+      <% if flash[:error] %>
+        <%= flash[:error] %>
+      <% end %>
+    </div>
+    <%= yield %>
   </div>
 </div>
 

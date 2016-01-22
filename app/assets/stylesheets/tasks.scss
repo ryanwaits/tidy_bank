@@ -10,7 +10,8 @@ $blue: #247BA0;
 $bg-color: #BAE6F1;
 
 section {
-  margin: 0 auto;
+  margin: 5% auto;
+  text-align: center;
 }
 
 .form-control {
@@ -37,7 +38,7 @@ section {
 
 .signup {
   margin: 2% auto;
-  width: 40%;
+  width: 50%;
 }
 
 
@@ -49,5 +50,10 @@ section {
 
 .summary p {
   padding: 0;
+}
+
+p.task {
+  font-size: 1.5em;
+  font-weight: 500;
 }
 
