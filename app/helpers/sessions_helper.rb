@@ -3,8 +3,8 @@ module SessionsHelper
       session[:parent_id] = parent.id
   end
 
-  def logged_in?
-    unless session[:parent_id].nil?
-    end
+  def child_log_in(child)
+    session[:child_id] = child.id
   end
+  
 end

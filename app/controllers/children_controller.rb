@@ -1,7 +1,7 @@
 class ChildrenController < ApplicationController
-  before_action :set_child, only: [:index, :show, :edit, :destroy]
+  before_action :set_child, only: [:show, :edit, :destroy]
   def index
-    @tasks = @child.tasks
+    
   end
 
   def show

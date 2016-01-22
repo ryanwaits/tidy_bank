@@ -15,6 +15,13 @@
     <% end %>
   </div>
 </div>
+<div class="row">
+  <div class="col-md-12 col-sm-12">
+    <% unless session[:child_id].nil? %>
+      <%= link_to 'Logout', logout_path, method: :delete, class: 'logout' %>
+    <% end %>
+  </div>
+</div>
 
 <div class="row">
   <div class="col-md-12 col-sm-12">

@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  include SessionsHelper
   def new
 
   end
@@ -6,7 +7,7 @@ class SessionsController < ApplicationController
   def create
     parent = Parent.find_by(username: params[:session][:username])
     if parent && parent.authenticate(params[:session][:password])
-      session[:parent_id] = parent.id
+      log_in(parent)
       flash[:logged_in] = "Logged in"
       redirect_to parents_path
     else
