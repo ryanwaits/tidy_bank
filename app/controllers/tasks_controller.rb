@@ -7,6 +7,7 @@ class TasksController < ApplicationController
 
   def new
     @task = Task.new
+    @child = Child.find_by_id(params[:child])
   end
 
   def create
