@@ -24,4 +24,11 @@ $(function(){
   $('#due_date').on('focusout', function(){
     $(this).attr('placeholder', 'due date');
   })
+
+  // Set timer for flash notifications
+
+  setTimeout(function(){
+      $('.logged-in, .error, .notice').remove();
+    }, 3000);
+
 });

@@ -15,6 +15,7 @@ class TasksController < ApplicationController
     @task.completed = false
 
     if @task.save
+      flash[:notice] = "Your task has been created!"
       redirect_to parents_path
     else
       flash[:notice] = "Please fill out the form!"
