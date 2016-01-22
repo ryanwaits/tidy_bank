@@ -10,10 +10,10 @@
   <div class="col-md-12">
     <div class="btn-group">
     <% if @children.length == 1  %>
-      <%= link_to @children.first.first_name, { controller: 'children', action: 'new'}, class: 'btn btn-default btn-lg button' %>
+      <%= link_to @children.first.first_name, new_task_path(child: @children.first.id), class: 'btn btn-default btn-lg button' %>
       <% elsif @children.length >= 2 %>
       <% @children.each do |child| %>
-        <%= link_to child.first_name, { controller: 'children', action: 'new'}, class: 'btn btn-default btn-lg button' %>
+        <%= link_to child.first_name, new_task_path(child: child.id), class: 'btn btn-default btn-lg button' %>
       <% end %>
     <% end %>
   </div>

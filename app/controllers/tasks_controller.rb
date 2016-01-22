@@ -10,7 +10,9 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.create(parent_params)
+    @task = Task.new(task_params)
+    @task.completed = false
+
     if @task.save
       redirect_to parents_path
     else
@@ -20,7 +22,8 @@ class TasksController < ApplicationController
   end
 
   private
+
   def task_params
-    params.require(:task).permit(:description, :price, :due_date)
+    params.require(:task).permit(:description, :price, :due_date, :child_id)
   end
 end

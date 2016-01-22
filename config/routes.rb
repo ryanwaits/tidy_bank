@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :parents
   resources :children
-  resources :tasks, only: [:create, :update, :destroy]
+  resources :tasks, only: [:new, :create, :update, :destroy]
   resources :sessions, only: [:new]
   get 'login',  to: 'sessions#new'
   post 'login',  to: 'sessions#create'

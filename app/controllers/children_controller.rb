@@ -17,6 +17,7 @@ class ChildrenController < ApplicationController
     @child.balance_id = @balance.id
 
     if @child.save
+      session[:child_id] = @child.id
       redirect_to parents_path
     else
       render 'new'
