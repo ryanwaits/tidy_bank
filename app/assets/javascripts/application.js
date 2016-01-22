@@ -15,3 +15,13 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function(){
+  $('#due_date').on('focus', function(){
+    $(this).attr('placeholder', 'mm/dd/yyyy');
+  })
+
+  $('#due_date').on('focusout', function(){
+    $(this).attr('placeholder', 'due date');
+  })
+});
