@@ -1,7 +1,8 @@
-
 <h1>Add a Task</h1>
 
   <%= form_for(@task) do |f| %>
+  <%= f.hidden_field :child_id, value: params[:child] %>
+
   <%= f.label :description %>
   <%= f.text_field :description, class: 'form-control' %>
 
