@@ -6,9 +6,9 @@
   <h1>You currently have <%= @tasks.count %> tasks</h1>
 <% end %>
 <div class="row center dashboard-button">
-  <div class="col-md-12 col-sm-12">
+  <div class="col-md-12 col-sm-12 for">
       <% @tasks.each do |task| %>
-        <p><%= task.description %> <%= task.price %> <%= task.due_date %></p>
+        <p class="task"><%= task.description %> for $<%= sprintf('%.2f', task.price) %> by <%= task.due_date %></p>
       <% end %>
   </div>
 </div>
