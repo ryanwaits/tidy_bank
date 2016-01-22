@@ -2,10 +2,8 @@
   <div class="row">
     <div class="col-md-6 col-sm-6 for">
       <h1><%=@child.first_name %>'s Tasks</h1>
-      <% if @tasks.length == 0 %>
+      <% if @tasks.length < 0 %>
         <p class="task">You have no tasks</p>
-        <% elsif @tasks.length == 1 %>
-        <p class="task"><%= @tasks.description %> for $<%= sprintf('%.2f', @tasks.price) %></p>
         <% else %>
         <% @tasks.each do |task| %>
           <p class="task"><%= task.description %> for $<%= sprintf('%.2f', task.price) %></p>
