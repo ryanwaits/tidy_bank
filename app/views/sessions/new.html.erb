@@ -1,12 +1,28 @@
-<h1>Login</h1> 
+<div class="row">
+  <div class="col-md-12 col-sm-12">
+    <h1>Login</h1>
+  </div>
+</div>
 
  <%= form_for(:session, url: login_path) do |f| %>
 
-    <%= f.label :username %>
-    <%= f.text_field :username, class: 'form-control' %>
-
-    <%= f.label :password %>
-    <%= f.password_field :password, class: 'form-control' %>
-
-    <%= f.submit "Log in", class: "btn btn-primary" %>
+    <section>
+      <div class="row">
+        <div class="col-md-12 col-sm-12 centered">
+          <%= f.text_field :username, class: 'form-control', placeholder: 'username' %>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <%= f.password_field :password, class: 'form-control', placeholder: 'password' %>
+        </div>
+      </div>
+    </section>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <%= f.submit "Log in", class: "btn btn-primary" %>
+      </div>
+    </div>
  <% end %>
