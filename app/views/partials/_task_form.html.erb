@@ -1,4 +1,4 @@
-<h1>Add a Task</h1>
+<h1>Add a Task for <%= @child.first_name %></h1>
 
   <%= form_for(@task) do |f| %>
   <%= f.hidden_field :child_id, value: params[:child] %>
@@ -6,7 +6,7 @@
   <%= f.label :description %>
   <%= f.text_field :description, class: 'form-control' %>
 
-  <%= f.label :price %>
+  <%= f.label :tip %>
   <%= f.number_field :price, class: 'form-control' %>
 
   <%= f.label :due_date %>
