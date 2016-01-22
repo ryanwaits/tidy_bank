@@ -1,17 +1,37 @@
-<h1>Add a Task</h1>
+<div class="row">
+  <div class="col-md-12 col-sm-12">
+    <h1>Add a Task</h1>
+  </div>
+</div>
 
   <%= form_for(@task) do |f| %>
   <%= f.hidden_field :child_id, value: params[:child] %>
 
-  <%= f.label :description %>
-  <%= f.text_field :description, class: 'form-control' %>
-
-  <%= f.label :price %>
-  <%= f.number_field :price, class: 'form-control' %>
-
-  <%= f.label :due_date %>
-  <%= f.date_field :due_date, class: 'form-control' %>
-
-  <%= f.submit "Add Task" %>
+<section>
+  <div class="row">
+    <div class="col-md-12 col-sm-12 centered">
+      <%= f.text_field :description, class: 'form-control', placeholder: 'description' %>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="row">
+    <div class="col-md-12 col-sm-12 centered">
+      <%= f.number_field :price, class: 'form-control', placeholder: 'price' %>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="row">
+    <div class="col-md-12 col-sm-12 centered">
+      <%= f.date_field :due_date, class: 'form-control', placeholder: 'due date' %>
+    </div>
+  </div>
+</section>
+  <div class="row">
+    <div class="col-md-12 col-sm-12">
+      <%= f.submit "Add Task", class: 'btn btn-primary' %>
+    </div>
+  </div>
 
 <% end %>

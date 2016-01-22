@@ -1,3 +1,63 @@
-// Place all the styles related to the children controller here.
+// Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$light-green: #B2DBBF;
+$dark-green: #70C1B3;
+$yellow: #F3FFBD;
+$red: #FF1654;
+$blue: #247BA0;
+$bg-color: #BAE6F1;
+
+section {
+  margin: 2% auto;
+}
+
+h1 {
+  color: $red;
+  font-weight: 600;
+  margin-bottom: 1%;
+  font-size: 45px;
+  text-align: center;
+  margin-top: 3%;
+}
+
+.row {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.centered {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.form-control {
+  width: 38%;
+  margin-bottom: 5%;
+  text-align: center;
+  margin: .25% auto;
+  height: 50px;
+  font-size: 28px;
+  font-weight: 400;
+  border-radius: 250px;
+}
+
+.btn {
+  margin: .5% auto;
+  background-color: $yellow !important;
+  color: $red !important;
+  width: 200px;
+  font-weight: 800;
+  border: none;
+  font-size: 18px !important;
+  border-radius: 250px;
+  margin-bottom: 3%;
+
+}
+
+.text {
+  color: $blue;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
