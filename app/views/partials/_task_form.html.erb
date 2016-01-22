@@ -1,37 +1,65 @@
-<div class="row">
-  <div class="col-md-12 col-sm-12">
-    <h1>Add a Task for <%= @child.first_name %></h1>
-  </div>
-</div>
-
-  <%= form_for(@task) do |f| %>
-  <%= f.hidden_field :child_id, value: params[:child] %>
-
 <section>
-  <div class="row">
-    <div class="col-md-12 col-sm-12 centered">
-      <%= f.text_field :description, class: 'form-control', placeholder: 'description' %>
+  <div class="row for">
+    <div class="col-md-6 col-sm-6 who">
+      <h1>Add a Task for <%= @child.first_name %></h1>
+    </div>
+    <div class="col-md-6 col-sm-6 who">
+      <h1><%=@child.first_name %>'s Tasks</h1>
     </div>
   </div>
 </section>
-<section>
-  <div class="row">
-    <div class="col-md-12 col-sm-12 centered">
-      <%= f.number_field :price, class: 'form-control', placeholder: 'price' %>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="row">
-    <div class="col-md-12 col-sm-12 centered">
-      <%= text_field_tag :due_date, nil, class: 'form-control', placeholder: 'due date' %>
-    </div>
-  </div>
-</section>
-  <div class="row">
-    <div class="col-md-12 col-sm-12">
-      <%= f.submit "Add Task", class: 'btn btn-primary' %>
-    </div>
-  </div>
 
-<% end %>
+
+    <%= form_for(@task) do |f| %>
+    <%= f.hidden_field :child_id, value: params[:child] %>
+
+  <section>
+    <div class="row column">
+      <div class="col-md-6 col-sm-6 summary">
+        <p><%= f.text_field :description, class: 'form-control', placeholder: 'description' %></p>
+      </div>
+      <% if @child.tasks.length < 1 %>
+  <section>
+          <div class="row columb">
+            <div class="col-md-6 col-sm-6 summary">
+              <p class="task"><%= @child.tasks.inspect %></p>
+            </div>
+          </div>
+
+        <% else %>
+          <% @child.each do |child| %>
+
+              <div class="row column">
+                <div class="col-md-6 col-sm-6 summary">
+                  <p class="task"><%= child.tasks %></p>
+                </div>
+              </div>
+  </section>
+          <% end %>
+      <% end %>
+    </div>
+  </section>
+
+  <section>
+    <div class="row column">
+      <div class="col-md-6 col-sm-6 summary">
+        <p><%= f.number_field :price, class: 'form-control', placeholder: 'price' %></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="row column">
+      <div class="col-md-6 col-sm-6 summary">
+        <p><%= date_field_tag :due_date, nil, class: 'form-control', placeholder: 'due date' %></p>
+      </div>
+    </div>
+  </section>
+
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <%= f.submit "Save Task", class: 'btn btn-primary save-task' %>
+      </div>
+    </div>
+
+  <% end %>
