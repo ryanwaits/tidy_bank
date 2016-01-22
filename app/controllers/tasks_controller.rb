@@ -8,6 +8,7 @@ class TasksController < ApplicationController
   def new
     @task = Task.new
     @child = Child.find_by_id(params[:child])
+    @tasks = Task.where(child_id: @child).all
   end
 
   def create
