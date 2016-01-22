@@ -9,15 +9,16 @@ $blue: #247BA0;
 $bg-color: #BAE6F1;
 
 section {
-  margin: 5% auto;
+  margin: 2% auto;
 }
 
 h1 {
   color: $red;
-  font-weight: 400;
-  margin-bottom: 5%;
+  font-weight: 600;
+  margin-bottom: 1%;
   font-size: 45px;
   text-align: center;
+  margin-top: 3%;
 }
 
 .row {
@@ -31,25 +32,32 @@ h1 {
 }
 
 .form-control {
-  width: 30%;
+  width: 38%;
   margin-bottom: 5%;
   text-align: center;
   margin: 0 auto;
+  height: 50px;
+  font-size: 28px;
+  font-weight: 400;
+  border-radius: 250px;
 }
 
 .btn {
-  margin: 2% auto;
+  margin: .5% auto;
   background-color: $yellow !important;
   color: $red !important;
   width: 200px;
   font-weight: 800;
   border: none;
   font-size: 18px !important;
+  border-radius: 250px;
+  margin-bottom: 3%;
+
 }
 
 .text {
   color: $blue;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 600;
   text-align: center;
 }
