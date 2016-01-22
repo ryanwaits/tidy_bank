@@ -1,7 +1,7 @@
 class ChildrenController < ApplicationController
   before_action :set_child, only: [:show, :edit, :destroy]
   def index
-    @tasks = Task.where(child_id: 38)
+    @tasks = Task.where(child_id: session[:child_id]).all
   end
 
   def show

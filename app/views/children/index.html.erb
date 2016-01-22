@@ -1,6 +1,8 @@
 <div class="row center dashboard-button">
   <div class="col-md-12 col-sm-12">
-      <%= @tasks.inspect %>
+      <% @tasks.each do |task| %>
+        <p><%= task.description %></p>
+      <% end %>
 
   </div>
 </div>
