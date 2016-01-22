@@ -29,10 +29,23 @@ h1 {
 .centered {
   text-align: center;
   margin: 0 auto;
+  width: 80%;
 }
 
 .form-control {
   width: 38%;
+  margin-bottom: 5%;
+  text-align: center;
+  margin: .25% auto;
+  height: 50px;
+  font-size: 28px;
+  font-weight: 400;
+  border-radius: 250px;
+  color: $blue;
+}
+
+.signup {
+  width: 50%;
   margin-bottom: 5%;
   text-align: center;
   margin: .25% auto;
@@ -61,4 +74,9 @@ h1 {
   font-size: 30px;
   font-weight: 600;
   text-align: center;
+}
+
+
+.save-task {
+  margin-top: 2%;
 }
