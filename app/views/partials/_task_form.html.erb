@@ -1,4 +1,4 @@
-<section class="width: 100%;">
+<section style="margin: 5% auto;">
   <div class="row">
     <div class="col-md-6 col-sm-6 for">
       <h1><%=@child.first_name %>'s Tasks</h1>
@@ -18,7 +18,6 @@
       <h1>Add a Task for <%= @child.first_name %></h1>
       <p><%= f.text_field :description, class: 'form-control', placeholder: 'description' %></p>
       <p><%= f.number_field :price, class: 'form-control', placeholder: 'price' %></p>
-      <p><%= date_field_tag :due_date, nil, class: 'form-control', placeholder: 'due date' %></p>
       <%= f.submit "Save Task", class: 'btn btn-primary save-task' %>
     </div>
   <% end %>
