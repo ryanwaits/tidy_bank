@@ -2,19 +2,63 @@
 
 
   <%= form_for(@parent) do |f| %>
-   <%= f.label :first_name %>
-  <%= f.text_field :first_name, class: 'form-control'  %>
-   <%= f.label :last_name %>
-  <%= f.text_field :last_name, class: 'form-control'  %>
-   <%= f.label :email %>
-  <%= f.email_field :email, class: 'form-control'  %>
-   <%= f.label :username %>
-  <%= f.text_field :username, class: 'form-control'  %>
-   <%= f.label :password %>
-  <%= f.password_field :password, class: 'form-control'  %>
-   <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation, class: 'form-control'  %>
-   <%= f.submit "Update Account", class: "btn btn-primary" %>
+
+ <section>
+   <div class="row">
+     <div class="col-md-12 col-sm-12">
+        <%= f.text_field :first_name, class: 'form-control signup'  %>
+     </div>
+   </div>
+ </section>
+
+  <section>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <%= f.text_field :last_name, class: 'form-control signup'  %>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <%= f.email_field :email, class: 'form-control signup'  %>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <%= f.text_field :username, class: 'form-control signup'  %>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <%= f.password_field :password, class: 'form-control signup', placeholder: 'password'  %>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <%= f.password_field :password_confirmation, class: 'form-control signup', placeholder: 'password_confirmation'  %>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <%= f.submit "Update Account", class: "btn btn-primary" %>
+      </div>
+    </div>
+  </section>
+
 
 <% end %>
 
