@@ -17,7 +17,7 @@ class ChildSessionsController < ApplicationController
   end
 
   def destroy
-    session[:child_id] = nil
+    session[:log_in_child_id] = nil
     session[:parent_id] = nil
     redirect_to root_path
   end
