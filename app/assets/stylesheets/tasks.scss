@@ -1,3 +1,53 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$light-green: #B2DBBF;
+$dark-green: #70C1B3;
+$yellow: #F3FFBD;
+$red: #FF1654;
+$blue: #247BA0;
+$bg-color: #BAE6F1;
+
+section {
+  margin: 0 auto;
+}
+
+.form-control {
+  width: 80%;
+  margin: 2% auto;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  height: 60px;
+}
+
+.who {
+  margin: 0 auto;
+  width: 50%;
+  padding-bottom: 2%;
+}
+
+.column {
+  display: inline;
+  font-size: 20px;
+  font-weight: 400;
+  color: $blue;
+  margin: 0 auto;
+}
+
+.signup {
+  margin: 2% auto;
+  width: 50%;
+}
+
+
+.summary {
+  margin: 0 auto;
+  width: 50%;
+  display: inline;
+}
+
+.summary p {
+  padding: 0;
+}
+
