@@ -32,9 +32,18 @@ $bg-color: #BAE6F1;
   font-weight: 900;
 }
 
+.logout {
+  float: right;
+  margin: 3px 10px 0 auto;
+  font-size: 20px;
+  padding: 0;
+  color: #3EC1AB;
+}
+
 header.logo {
   margin: 0 5%;
   text-align: center;
+  padding-top: 3px;
 }
 
 .container {
@@ -47,6 +56,12 @@ header.logo {
 
 .navbar-brand {
   padding-top: 5px;
+}
+
+.notice, .logged-in, .error {
+  color: #3EC1AB;
+  font-size: 25px;
+  font-weight: 600;
 }
 
 

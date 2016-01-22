@@ -19,12 +19,16 @@ $bg-color: #BAE6F1;
   color: $red;
   margin-top: 0 auto;
   margin-bottom: .5px;
-  padding: 60px 0 15px 0;
+  padding: 40px 0 15px 0;
 }
 
 .dashboard-header {
   font-weight: 800;
   margin: 0 auto;
+}
+
+.jumbotron h1 {
+  font-size: 85px;
 }
 
 .dashboard-subheader {
@@ -105,5 +109,5 @@ section {
 }
 
 .dashboard-button {
-  padding: 1.5%;
+  padding: 1.0%;
 }
