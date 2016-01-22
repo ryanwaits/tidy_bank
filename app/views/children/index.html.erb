@@ -8,7 +8,7 @@
 <div class="row center dashboard-button">
   <div class="col-md-12 col-sm-12 for">
       <% @tasks.each do |task| %>
-        <p class="task"><%= task.description %> for $<%= sprintf('%.2f', task.price) %> by <%= task.due_date %></p>
+        <p class="task"><%= task.description %> for $<%= sprintf('%.2f', task.price) %></p>
       <% end %>
   </div>
 </div>
