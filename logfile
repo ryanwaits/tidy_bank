@@ -7,3 +7,8 @@ FATAL:  database "tidy_bank_development" does not exist
 FATAL:  database "tidy_bank_development" does not exist
 ERROR:  missing FROM-clause entry for table "email" at character 42
 STATEMENT:  SELECT  "parents".* FROM "parents" WHERE "email"."email" = 'ryan.waits@gmail.com' LIMIT 1
+LOG:  database system was shut down at 2016-02-20 18:01:23 CST
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "ryanwaits" does not exist
