@@ -1,7 +1,6 @@
 class Child < ActiveRecord::Base
   belongs_to :parent
-  belongs_to :balance
-  has_many :tasks
+  has_many :tasks, dependent: :destroy
 
   before_save { self.email = self.email.downcase }
   validates :first_name, :email, :password, :password_confirmation, presence: true
