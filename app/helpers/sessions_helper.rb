@@ -1,12 +1,12 @@
 module SessionsHelper
-  def log_in(parent)
-      session[:parent_id] = parent.id
-      session[:log_in_child_id] = nil
-  end
-
-  def child_log_in(child)
-    session[:log_in_child_id] = child.id
-    session[:parent_id] = nil
+  def log_in(user)
+      if user.class == Parent
+          session[:parent_id] = user.id
+          session[:log_in_child_id] = nil
+      else
+          session[:log_in_child_id] = user.id
+          session[:parent_id] = nil
+      end
   end
 
 end
