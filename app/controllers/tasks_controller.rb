@@ -14,12 +14,11 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     @task.completed = false
-
     if @task.save
-      flash[:notice] = "Your task has been created!"
+      flash.notice = "Your task has been created!"
       redirect_to parents_path
     else
-      flash[:notice] = "Please fill out the form!"
+      flash.notice = "Please fill out the form!"
       redirect_to new_task_path
     end
   end
