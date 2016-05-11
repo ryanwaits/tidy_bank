@@ -11,15 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160120144517) do
+ActiveRecord::Schema.define(version: 20160511190227) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "balances", force: :cascade do |t|
-    t.float "current_balance"
-    t.float "balance_due"
-  end
 
   create_table "children", force: :cascade do |t|
     t.string  "first_name"
@@ -28,10 +23,9 @@ ActiveRecord::Schema.define(version: 20160120144517) do
     t.string  "email"
     t.string  "password_digest"
     t.integer "parent_id"
-    t.integer "balance_id"
+    t.float   "balance"
   end
 
-  add_index "children", ["balance_id"], name: "index_children_on_balance_id", using: :btree
   add_index "children", ["parent_id"], name: "index_children_on_parent_id", using: :btree
 
   create_table "parents", force: :cascade do |t|
@@ -52,7 +46,6 @@ ActiveRecord::Schema.define(version: 20160120144517) do
 
   add_index "tasks", ["child_id"], name: "index_tasks_on_child_id", using: :btree
 
-  add_foreign_key "children", "balances"
   add_foreign_key "children", "parents"
   add_foreign_key "tasks", "children"
 end
