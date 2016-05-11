@@ -12,11 +12,10 @@ class ChildrenController < ApplicationController
   end
 
   def create
-    @child = Child.new(child_params)
+    @child = Child.new
     @child.parent_id = session[:parent_id]
-    @balance = Balance.create(current_balance: 0, balance_due: 0)
-    @child.balance_id = @balance.id
-
+    @child.balance = 0.0
+    @child.update_attributes(child_params)
     if @child.save
       session[:child_id] = @child.id
       redirect_to parents_path
