@@ -7,7 +7,7 @@ class ChildSessionsController < ApplicationController
   def create
     child = Child.find_by(username: params[:session][:username])
     if child && child.authenticate(params[:session][:password])
-      child_log_in(child)
+      log_in(child)
       flash[:logged_in] = "Logged in"
       redirect_to children_path
     else
