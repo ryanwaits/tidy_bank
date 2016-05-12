@@ -33,7 +33,7 @@ class ParentsController < ApplicationController
    end
 
 def update
-  @parent = Parent.update(params[:id],parent_params)
+  @parent = Parent.update(params[:id], parent_params)
 
   if @parent.save
   redirect_to parents_path
