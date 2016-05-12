@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
   include SessionsHelper
+  respond_to :html
+
   def new
 
   end
@@ -8,17 +10,23 @@ class SessionsController < ApplicationController
     parent = Parent.find_by(username: params[:session][:username])
     if parent && parent.authenticate(params[:session][:password])
       log_in(parent)
-      flash[:logged_in] = "Logged in"
-      redirect_to parents_path
+      flash.notice = "Logged in"
+      respond_with parent, location: parents_path
     else
-      flash[:error] = "Your username or password is incorrect"
-      render 'new'
+      set_flash_message
     end
   end
 
   def destroy
     log_out
     redirect_to root_path
+  end
+
+  private 
+
+  def set_flash_message
+    flash.now.notice = "Your username or password is incorrect"
+    render 'new'
   end
 end
 
