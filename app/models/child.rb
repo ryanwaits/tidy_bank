@@ -7,4 +7,8 @@ class Child < ActiveRecord::Base
   validates :password, length: { minimum: 6 }
   
   has_secure_password
+
+  def self.completed
+    joins(:tasks).merge(Task.completed)
+  end
 end
