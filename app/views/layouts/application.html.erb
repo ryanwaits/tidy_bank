@@ -23,7 +23,6 @@
     <% unless session[:log_in_child_id].nil? %>
       <%= link_to 'Logout', child_logout_path, method: :delete, class: 'logout' %>
       <%= link_to 'Tasks', children_path, class: 'logout' %>
-      <%= link_to 'Account', edit_child_path(session[:log_in_child_id]), class: 'logout' %>
       <%= link_to 'Home', root_path, class: 'logout' %>
     <% end %>
   </div>
