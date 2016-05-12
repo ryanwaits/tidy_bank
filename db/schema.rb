@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20160511190227) do
     t.string  "email"
     t.string  "password_digest"
     t.integer "parent_id"
-    t.float   "balance"
+    t.float   "balance",         default: 0.0
   end
 
   add_index "children", ["parent_id"], name: "index_children_on_parent_id", using: :btree

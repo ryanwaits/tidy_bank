@@ -14,7 +14,6 @@ class ChildrenController < ApplicationController
   def create
     @child = Child.new
     @child.parent_id = session[:parent_id]
-    @child.balance = 0.0
     @child.update_attributes(child_params)
     if @child.save
       session[:child_id] = @child.id
