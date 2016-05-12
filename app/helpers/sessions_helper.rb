@@ -9,4 +9,8 @@ module SessionsHelper
       end
   end
 
+  def log_out
+    session[:parent_id], session[:child_id] = nil
+  end
+
 end

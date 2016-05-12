@@ -11,14 +11,13 @@ class ChildSessionsController < ApplicationController
       flash[:logged_in] = "Logged in"
       redirect_to children_path
     else
-      flash[:error] = "Your username or password is incorrect"
+      flash.error = "Your username or password is incorrect"
       redirect_to child_login_path
     end
   end
 
   def destroy
-    session[:log_in_child_id] = nil
-    session[:parent_id] = nil
+    log_out
     redirect_to root_path
   end
 end
