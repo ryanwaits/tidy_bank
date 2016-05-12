@@ -1,10 +1,10 @@
 class ParentsController < ApplicationController
   before_action :set_parent, only: [:show, :edit, :destroy]
+  before_action :get_children, only: [:index]
   include SessionsHelper
   
   def index
-    @parent = session[:parent_id]
-    @children = Child.where(parent_id: @parent)
+
   end
 
   def show
@@ -52,6 +52,10 @@ def update
 
   def parent_params
     params.require(:parent).permit(:first_name, :last_name, :email, :username, :password, :password_confirmation)
+  end
+
+  def get_children
+    @children = Child.where(parent_id: session[:parent_id])
   end
 
 end
