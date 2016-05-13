@@ -1,5 +1,6 @@
 class ChildrenController < ApplicationController
   before_action :set_child, only: [:show, :edit, :destroy]
+  
   def index
     @tasks = Child.find(session[:child_id]).tasks
   end

@@ -1,7 +1,8 @@
 class ParentsController < ApplicationController
+  include SessionsHelper
+  
   before_action :set_parent, only: [:show, :edit, :destroy]
   before_action :get_children, only: [:index]
-  include SessionsHelper
   
   def index
 
