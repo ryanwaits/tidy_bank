@@ -40,18 +40,8 @@
 <div class="row">
   <div class="container">
     <div class="notice">
-      <% if flash[:notice] %>
-        <%= flash[:notice] %>
-      <% end %>
-    </div>
-    <div class="logged-in">
-      <% if flash[:logged_in] %>
-        <%= flash[:logged_in] %>
-      <% end %>
-    </div>
-    <div class="error">
-      <% if flash[:error] %>
-        <%= flash[:error] %>
+      <% if flash.notice %>
+        <%= flash.notice %>
       <% end %>
     </div>
     <%= yield %>

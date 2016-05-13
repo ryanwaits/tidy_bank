@@ -22,9 +22,10 @@ class ParentsController < ApplicationController
 
     if @parent.save
       log_in(@parent)
+      flash.notice = "Logged in"
       respond_with @parent, location: parents_path
     else
-      flash[:notice] = "Please fill out the form!"
+      flash.notice = "Please fill out the form!"
       redirect_to new_parent_path
     end
   end
@@ -38,9 +39,9 @@ def update
 
   if @parent.save
   respond_with @parent, location: parents_path
-  flash[:notice] = "Your account has been updated."
+  flash.notice = "Your account has been updated."
     else
-      flash[:notice] = "Please fill out the form!"
+      flash.notice = "Please fill out the form!"
       redirect_to edit_parent_path
     end
   end
