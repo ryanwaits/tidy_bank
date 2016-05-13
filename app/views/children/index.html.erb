@@ -8,7 +8,7 @@
 <div class="row center dashboard-button">
   <div class="col-md-12 col-sm-12 for">
       <% @tasks.each do |task| %>
-        <p class="task"><%= task.description %> for $<%= sprintf('%.2f', task.price) %></p>
+        <p class="task"><%= link_to "#{task.description} for #{sprintf('%.2f', task.price)}", task_path(task) %></p>
       <% end %>
   </div>
 </div>
