@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'dashboards#index'
 
   resources :parents
-  resources :children, only: [:index, :new]
+  resources :children, only: [:index, :new, :create]
   resources :tasks, only: [:show, :new, :create, :update, :destroy]
   
   get 'login',  to: 'sessions#new'
