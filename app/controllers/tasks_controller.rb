@@ -1,4 +1,8 @@
 class TasksController < ApplicationController
+  before_action :set_task, only: [:show, :update]
+  def show
+    
+  end
 
   def new
     @task = Task.new
@@ -17,9 +21,19 @@ class TasksController < ApplicationController
     end
   end
 
+  def update
+    @task.update_attributes(completed: true)
+    flash.notice = 'Task complete!'
+    redirect_to @task
+  end
+
   private
 
+  def set_task
+    @task = Task.find(params[:id])
+  end
+
   def task_params
-    params.require(:task).permit(:description, :price, :due_date, :child_id)
+    params.require(:task).permit(:description, :price, :due_date, :child_id, :completed)
   end
 end
