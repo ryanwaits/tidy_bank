@@ -8,25 +8,7 @@
 </head>
 <body>
 
-<div class="row">
-  <div class="col-md-12 col-sm-12">
-    <% unless session[:parent_id].nil? %>
-      <%= link_to 'Logout', logout_path, method: :delete, class: 'logout' %>
-      <%= link_to 'Tasks', parents_path, class: 'logout' %>
-      <%= link_to 'Account', edit_parent_path(session[:parent_id]), class: 'logout' %>
-      <%= link_to 'Home', root_path, class: 'logout' %>
-    <% end %>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12 col-sm-12">
-    <% unless session[:child_id].nil? %>
-      <%= link_to 'Logout', child_logout_path, method: :delete, class: 'logout' %>
-      <%= link_to 'Tasks', children_path, class: 'logout' %>
-      <%= link_to 'Home', root_path, class: 'logout' %>
-    <% end %>
-  </div>
-</div>
+<%= render 'partials/header' %>
 
 <div class="row">
   <div class="col-md-12 col-sm-12">
@@ -48,9 +30,6 @@
   </div>
 </div>
 
-
-
-Parent: <%= debug session[:parent_id] %>
-Child: <%= debug session[:child_id] %>
+<%= render 'partials/logger' %>
 </body>
 </html>
