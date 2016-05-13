@@ -2,9 +2,9 @@ module SessionsHelper
   def log_in(user)
       if user.class == Parent
           session[:parent_id] = user.id
-          session[:log_in_child_id] = nil
+          session[:child_id] = nil
       else
-          session[:log_in_child_id] = user.id
+          session[:child_id] = user.id
           session[:parent_id] = nil
       end
   end
