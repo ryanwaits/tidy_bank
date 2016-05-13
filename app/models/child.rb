@@ -9,6 +9,6 @@ class Child < ActiveRecord::Base
   has_secure_password
 
   def self.completed
-    joins(:tasks).merge(Task.completed)
+    joins(:tasks).merge(Task.completed).distinct
   end
 end
