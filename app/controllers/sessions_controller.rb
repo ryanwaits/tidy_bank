@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
   include SessionsHelper
-  respond_to :html
 
   def new
 
