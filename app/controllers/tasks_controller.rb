@@ -23,6 +23,9 @@ class TasksController < ApplicationController
 
   def update
     @task.update_attributes(completed: true)
+    # update balance column on childrens table to reflect task price that has been completed
+    # 
+    # 
     flash.notice = 'Task complete!'
     redirect_to @task
   end
