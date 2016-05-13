@@ -14,7 +14,7 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
     if @task.save
       flash.notice = "Your task has been created!"
-      redirect_to parents_path
+      respond_with @task, location: parents_path
     else
       flash.notice = "Please fill out the form!"
       redirect_to new_task_path
@@ -27,7 +27,7 @@ class TasksController < ApplicationController
     # 
     # 
     flash.notice = 'Task complete!'
-    redirect_to @task
+    respond_with @task, location: @task
   end
 
   private

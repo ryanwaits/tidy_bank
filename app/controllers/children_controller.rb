@@ -17,7 +17,7 @@ class ChildrenController < ApplicationController
     @child.update_attributes(child_params)
     if @child.save
       session[:child_id] = @child.id
-      redirect_to parents_path
+      respond_with @child, location: parents_path
     else
       render 'new'
     end
